@@ -47,7 +47,7 @@ export const getTestDB = async (): Promise<LobeChatDatabase> => {
   testClientDB = pgliteDrizzle({ client: pglite, schema });
 
   // Custom migration that skips pg_search-related SQL for PGlite compatibility
-/*  const migrations = readMigrationFiles({ migrationsFolder });
+  const migrations = readMigrationFiles({ migrationsFolder });
 
   await testClientDB.execute(sql`CREATE SCHEMA IF NOT EXISTS "drizzle"`);
   await testClientDB.execute(sql`
