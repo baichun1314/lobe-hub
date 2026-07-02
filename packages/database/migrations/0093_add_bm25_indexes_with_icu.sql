@@ -4,7 +4,7 @@
 -- Large tables (documents, messages) are placed last to avoid blocking smaller index builds.
 
 -- 1. agents: title, description, slug, tags(jsonb), system_role, user_id
-DROP INDEX IF EXISTS agents_bm25_idx;--> statement-breakpoint
+/*DROP INDEX IF EXISTS agents_bm25_idx;--> statement-breakpoint
 CREATE INDEX agents_bm25_idx ON agents
 USING bm25 (id, title, description, slug, tags, system_role, user_id)
 WITH (
@@ -212,3 +212,4 @@ WITH (
     "role":    {"fast": true, "tokenizer": {"type": "keyword"}}
   }'
 );
+*/
